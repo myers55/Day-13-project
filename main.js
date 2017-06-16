@@ -12,12 +12,12 @@ var total = sports.push('football', 'swimming');
 var strings = ['this','is','a','collection','of','words'];
 // A:
   function longestString(){
-    var lgth = 0;
+    var lenghtStart = 0;
     var longest;
 
     for(var i=0; i < strings.length; i++){
-      if(strings[i].length > lgth){
-        lgth = strings[i].length;
+      if(strings[i].length > lenghtStart){
+        lenghtStart = strings[i].length;
         longest = strings[i];
       }
     }
@@ -39,7 +39,7 @@ var numbers = [1,12,4,18,9,7,11,3,101,5,6];
 
 function smallestNumber(numbers){
   var min = Math.min(...numbers);
-  return min;
+  return(min);
 }
 
 console.assert(smallestNumber(numbers) === 1, {"message": "smallestNumber should return 1"});
@@ -49,8 +49,9 @@ console.assert(smallestNumber(numbers) === 1, {"message": "smallestNumber should
 // Write a function `getEvens()` that accepts an array
 // and returns only the even numbers in the array.
 // A:
-var even = [];
+
  function getEvens(numbers){
+   var even = [];
    for (var i = 0; i < numbers.length; i++){
    if((numbers[i] % 2) !=1){
      even.push(numbers[i]);
@@ -80,13 +81,14 @@ console.assert(arrayReverser(numbers).toString() === '6,5,101,3,11,7,9,18,4,12,1
 // 6.
 // Write a function that accepts an array argument
 // and returns the sum of all of the numbers in the array
-// A:
-var sum = 0;
-  function sumArrayOfNumbers() {
+// A:0
+
+  function sumArrayOfNumbers(){
+    var sum = 0;
     for (var i = 0; i < numbers.length; i++) {
       sum = sum + numbers[i];
       }
-    return(sum);
+    return sum;
   }
   var numbers = [1,12,4,18,9,7,11,3,101,5,6];
 
@@ -97,8 +99,9 @@ console.assert(sumArrayOfNumbers(numbers) === 177, {'message': 'sumArrayOfNumber
 // Write a function that accepts an array argument
 // and returns an array of only the numbers greater than 10
 // A:
-var holder = [];
+
   function numbersOver10(numbers) {
+    var holder = [];
     for (var i = 0; i < numbers.length; i++) {
       if (numbers[i] > 10) {
         holder.push(numbers[i]);
@@ -115,8 +118,9 @@ console.assert(numbersOver10(numbers).toString() === "12,18,11,101", {'message':
 // Write a function that accepts both an array and number argument
 // and returns an array of only the numbers greater than the number passed to the function
 // A:
-  var mixture = [];
+
   function numbersOverX(numbers, y) {
+      var mixture = [];
       for (var i = 0; i < numbers.length; i++) {
         if(numbers[i] > y) {
           mixture.push(numbers[i]);
